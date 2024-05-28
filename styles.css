@@ -4,6 +4,7 @@
   --cg-blue: rgb(101, 130, 196);
   --cg-grey: rgb(243, 243, 243);
   --cg-white: rgb(255, 255, 255);
+  --cg-poppy: rgb(254, 155, 13);
 }
 
 html {
@@ -43,7 +44,7 @@ body {
 }
 
 .blue-text {
-  color: var(--cg-blue);
+  color: var(--cg-poppy);
 }
 
 .nav-list {
@@ -68,11 +69,15 @@ body {
 }
 
 .navbar a:hover {
-  color: var(--cg-blue);
+  color: var(--cg-poppy);
 }
 
 .navbar a:active {
-  color: var(--cg-blue);
+  color: var(--cg-poppy);
+}
+
+.navbar a.active {
+  color: var(--cg-poppy);
 }
 
 .logo a {
@@ -200,7 +205,7 @@ main {
 }
 
 .project-details a:hover {
-  color: var(--cg-blue);
+  color: var(--cg-poppy);
   text-decoration: underline;
 }
 
@@ -258,7 +263,7 @@ main {
 /* CSS for resume page */
 
 .button {
-  background-color: var(--cg-blue);
+  background-color: var(--cg-poppy);
   border: none;
   color: var(--cg-white);
 
@@ -273,7 +278,7 @@ main {
 
 .button:hover {
   background-color: var(--cg-white);
-  color: var(--cg-blue);
+  color: var(--cg-poppy);
 }
 
 .resume h2 {
