@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RSVP - Joe and Elijah</title>
+    <title>J & E</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,22 +18,69 @@
       </ul>
     </nav>
     <main>
-      <h2>RSVP</h2>
-      <form action="https://formspree.io/f/mpzvgwaa" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="attending">Will you be attending?</label>
-        <select id="attending" name="attending" required>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-        <input type="submit" value="Submit" />
-      </form>
+      <div class="rsvp">
+        <h2>Please RSVP by July 17th</h2>
+        <form action="https://formspree.io/f/mpzvgwaa" method="POST">
+          <div id="attendee-fields" class="form-group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <button class="button" type="button" id="add-attendee">
+            Add Attendee
+          </button>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <select id="attending" name="attending" required>
+              <option value="yes">Yes, I would love to attend</option>
+              <option value="no">
+                No, unfortunately I will not be attending
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message or dietary restriction"
+            ></textarea>
+          </div>
+          <input class="button" type="submit" value="Submit" />
+        </form>
+      </div>
     </main>
-    <footer class="footer">
-      © 2024 Joe's Personal Website | All Rights Reserved
-    </footer>
+    <script>
+      document
+        .getElementById("add-attendee")
+        .addEventListener("click", function () {
+          const attendeeFields = document.getElementById("attendee-fields");
+          const newField = document.createElement("div");
+          newField.className = "form-group";
+          newField.innerHTML = `
+            <label for="name">Name:</label>
+            <input type="text" name="name" required />
+          `;
+          attendeeFields.insertAdjacentElement("afterend", newField);
+
+          // Update the select options
+          const attendingSelect = document.getElementById("attending");
+          attendingSelect.innerHTML = `
+            <option value="yes">Yes, we would love to attend</option>
+            <option value="no">No, unfortunately we will not be attending</option>
+          `;
+        });
+    </script>
   </body>
 </html>
