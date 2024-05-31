@@ -271,7 +271,7 @@ main {
   cursor: pointer;
   border-radius: 4px;
   margin-top: 20px;
-  width: 200px;
+  width: 150px;
 }
 
 .button:hover {
@@ -325,8 +325,17 @@ main {
   border-radius: 4px;
 }
 
+.form-group textarea {
+  width: 450px; /* Make the textarea take the full width of its container */
+  min-height: 150px; /* Set a minimum height for the textarea */
+  padding: 10px; /* Add padding for better spacing */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 #add-attendee {
-  width: 200px;
+  width: 150px;
   align-self: flex-center;
   margin-bottom: 15px;
   padding: 10px;
@@ -346,6 +355,21 @@ main {
 .form-group select::placeholder,
 .form-group textarea::placeholder {
   color: #aaa; /* Set the color of the placeholder text */
+}
+
+/* CSS for registry */
+
+.container {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+}
+
+.image-link img {
+  width: 200px; /* Set the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 /* CSS for footer */
