@@ -159,7 +159,7 @@ main {
 
 .project-image-2 {
   object-fit: contain;
-  width: 198px;
+  width: 550px;
   height: 500px;
   flex-basis: 50px;
   flex-grow: 2;
@@ -171,6 +171,50 @@ main {
 .project-image-3 {
   object-fit: contain;
   width: 98px;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 2;
+
+  /* Debug border */
+  /* border: 2px solid black; */
+}
+
+.project-image-4 {
+  object-fit: contain;
+  width: 400px;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 2;
+
+  /* Debug border */
+  /* border: 2px solid black; */
+}
+
+.project-image-5 {
+  object-fit: contain;
+  width: 210px;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 2;
+
+  /* Debug border */
+  /* border: 2px solid black; */
+}
+
+.project-image-6 {
+  object-fit: contain;
+  width: 400px;
+  height: 500px;
+  flex-basis: 50px;
+  flex-grow: 2;
+
+  /* Debug border */
+  /* border: 2px solid black; */
+}
+
+.project-image-7 {
+  object-fit: contain;
+  width: 400px;
   height: 500px;
   flex-basis: 50px;
   flex-grow: 2;
