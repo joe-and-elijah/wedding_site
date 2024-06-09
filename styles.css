@@ -82,10 +82,12 @@ body {
 }
 
 .logo a {
+  color: var(--cg-poppy);
   font-family: Georgia;
 }
 
 .logo a:hover {
+  color: var(--cg-darkgrey);
   text-decoration: None;
 }
 
@@ -280,16 +282,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 175px;
+  padding: 143px;
+  margin-top: 30px;
   background-color: #f8f8f8;
   // border: 1px solid #ccc;
-  // border-radius: 5px;
+  border-radius: 7px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .about-image img {
-  max-width: 400px;
-  border-radius: 10px;
+  width: 450px;
+  height: 450px;
+  border-radius: 8px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
@@ -327,7 +331,7 @@ main {
 }
 
 .image-container img {
-  width: 600px;
+  width: 550px;
   border-radius: 7px;
   margin-right: 20px; /* Space between the image and the text to the right */
 }
