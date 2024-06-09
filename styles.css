@@ -146,12 +146,18 @@ main {
   /* border: 2px solid red; */
 }
 
+.photos-image-link img {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
 .project-image-1 {
   object-fit: contain;
   width: 550px;
   height: 500px;
   flex-basis: 50px;
   flex-grow: 2;
+  border-radius: 15px;
 
   /* Debug border */
   /* border: 2px solid black; */
@@ -163,6 +169,7 @@ main {
   height: 500px;
   flex-basis: 50px;
   flex-grow: 2;
+  border-radius: 15px;
 
   /* Debug border */
   /* border: 2px solid black; */
@@ -174,6 +181,7 @@ main {
   height: 500px;
   flex-basis: 50px;
   flex-grow: 2;
+  border-radius: 15px;
 
   /* Debug border */
   /* border: 2px solid black; */
@@ -238,6 +246,9 @@ main {
   text-align: center;
   justify-content: center;
 
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+
   /* Debug border */
   /* border: 2px solid green; */
 }
@@ -286,7 +297,8 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  border-radius: 7px;
+  margin-left: 200px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
@@ -307,6 +319,34 @@ main {
 
 /* CSS for resume page */
 
+.content-container {
+  display: flex;
+  align-items: flex-start; /* Align items at the start */
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 600px;
+  height: auto;
+  border-radius: 7px;
+  margin-right: 20px; /* Space between the image and the text to the right */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.text-above {
+  margin-top: 0;
+}
+
+.text-below {
+  margin-top: 20px;
+}
+
 .button {
   background-color: var(--cg-poppy);
   color: var(--cg-white);
@@ -314,7 +354,6 @@ main {
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
-  margin-top: 20px;
   width: 150px;
 }
 
@@ -352,6 +391,8 @@ main {
 }
 
 .form-group {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -362,11 +403,12 @@ main {
 
 .form-group input,
 .form-group select {
-  width: 450px;
+  width: 250px;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-right: 10px;
 }
 
 .form-group textarea {
@@ -408,7 +450,7 @@ main {
   align-items: center; /* Align items vertically */
 }
 
-.image-link img {
+.registry-image-link img {
   width: 200px; /* Set the width of the image */
   height: auto; /* Maintain aspect ratio */
   margin-top: 100px;

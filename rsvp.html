@@ -12,8 +12,7 @@
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="photos.html">Photos</a></li>
-        <li><a href="travel.html">Travel</a></li>
-        <li><a href="information.html">Details</a></li>
+        <li><a href="travel.html">Travel and Stay</a></li>
         <li><a href="registry.html">Registry</a></li>
         <li><a href="rsvp.html" class="active">RSVP</a></li>
       </ul>
@@ -22,27 +21,29 @@
       <div class="rsvp">
         <h2>Please RSVP by July 17th</h2>
         <form action="https://formspree.io/f/mpzvgwaa" method="POST">
-          <div id="attendee-fields" class="form-group">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              required
-            />
+          <div id="attendee-fields" class="attendee-group">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <select name="sandwich" required>
+                <option value="" disabled selected>Select a sandwich</option>
+                <option value="Turkey Sandwich">Turkey Sandwich</option>
+                <option value="Italian Sandwich">Italian Sandwich</option>
+                <option value="Gluten Free Sandwich">
+                  Gluten Free Sandwich
+                </option>
+                <option value="Vegetarian Sandwich">Vegetarian Sandwich</option>
+              </select>
+            </div>
           </div>
           <button class="button" type="button" id="add-attendee">
             Add Attendee
           </button>
-          <div class="form-group">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              required
-            />
-          </div>
           <div class="form-group">
             <select id="attending" name="attending" required>
               <option value="yes">Yes, I would love to attend</option>
@@ -55,7 +56,7 @@
             <textarea
               id="message"
               name="message"
-              placeholder="Message or dietary restriction"
+              placeholder="Message"
             ></textarea>
           </div>
           <input class="button" type="submit" value="Submit" />
@@ -71,16 +72,37 @@
           newField.className = "form-group";
           newField.innerHTML = `
             <input type="text" name="name" placeholder="Name" required />
+            <select name="sandwich" required>
+              <option value="" disabled selected>Select a sandwich</option>
+              <option value="Turkey Sandwich">Turkey Sandwich</option>
+              <option value="Italian Sandwich">Italian Sandwich</option>
+              <option value="Gluten Free Sandwich">Gluten Free Sandwich</option>
+              <option value="Vegetarian Sandwich">Vegetarian Sandwich</option>
+            </select>
           `;
-          attendeeFields.insertAdjacentElement("afterend", newField);
+          attendeeFields.appendChild(newField);
 
-          // Update the select options
-          const attendingSelect = document.getElementById("attending");
+          updateAttendingOptions();
+        });
+
+      function updateAttendingOptions() {
+        const attendeeCount = document.querySelectorAll(
+          "#attendee-fields .form-group"
+        ).length;
+        const attendingSelect = document.getElementById("attending");
+
+        if (attendeeCount > 1) {
           attendingSelect.innerHTML = `
             <option value="yes">Yes, we would love to attend</option>
             <option value="no">No, unfortunately we will not be attending</option>
           `;
-        });
+        } else {
+          attendingSelect.innerHTML = `
+            <option value="yes">Yes, I would love to attend</option>
+            <option value="no">No, unfortunately I will not be attending</option>
+          `;
+        }
+      }
     </script>
   </body>
 </html>
