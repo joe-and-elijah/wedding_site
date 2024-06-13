@@ -222,6 +222,8 @@ main {
   border-radius: 4px;
   width: 150px;
   font-family: "Dosis", sans-serif;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .button:hover {
