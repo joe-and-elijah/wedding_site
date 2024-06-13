@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: Dosis;
+  font-family: "Dosis", sans-serif;
 }
 
 /* CSS for navigation */
@@ -37,18 +37,13 @@ body {
   width: 100%;
   height: 7%;
   z-index: 10;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-
   background-color: var(--cg-white);
   color: var(--cg-white);
   padding: 0px 0px;
-
-  /* Debug border */
-  /* border: solid red; */
 }
 
 .blue-text {
@@ -61,9 +56,6 @@ body {
   position: relative;
   right: 30px;
   list-style: none;
-
-  /* Debug border */
-  /* border: solid blue; */
 }
 
 .navbar a {
@@ -72,18 +64,11 @@ body {
   margin: 0 12px;
   text-decoration: none;
   letter-spacing: 2px;
-
-  font-family: Dosis;
+  font-family: "Dosis", sans-serif;
 }
 
-.navbar a:hover {
-  color: var(--cg-poppy);
-}
-
-.navbar a:active {
-  color: var(--cg-poppy);
-}
-
+.navbar a:hover,
+.navbar a:active,
 .navbar a.active {
   color: var(--cg-poppy);
 }
@@ -95,7 +80,7 @@ body {
 
 .logo a:hover {
   color: var(--cg-darkgrey);
-  text-decoration: None;
+  text-decoration: none;
 }
 
 main {
@@ -110,171 +95,44 @@ main {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-family: Dosis;
+  font-family: "Dosis", sans-serif;
 }
 
 /* CSS for portfolio grid */
-
-.project-1 {
+/* CSS for portfolio grid */
+.gallery {
   display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 1em 0 2em 0;
-  padding: 0px 250px 0px 0px;
-
-  /* Debug border */
-  /* border: 2px solid blue; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
-.project-2 {
+.project {
+  width: calc(50% - 15px); /* Two items per row with space between */
+  margin-bottom: 30px; /* Spacing between rows */
   display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 1em 0 2em 0;
-  padding: 0px 0px 0px 250px;
-
-  /* Debug border */
-  /* border: 2px solid blue; */
-}
-
-.project-3 {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 1em 0 2em 0;
-  padding: 0px 0px 0px 250px;
-
-  /* Debug border */
-  /* border: 2px solid blue; */
-}
-
-.item-link {
-  width: 70%;
-
-  /* Debug border */
-  /* border: 2px solid red; */
-}
-
-.photos-image-link img {
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-}
-
-.project-image-1 {
-  object-fit: contain;
-  width: 550px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-  border-radius: 15px;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-image-2 {
-  object-fit: contain;
-  width: 550px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-  border-radius: 15px;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-image-3 {
-  object-fit: contain;
-  width: 98px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-  border-radius: 15px;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-image-4 {
-  object-fit: contain;
-  width: 400px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-image-5 {
-  object-fit: contain;
-  width: 210px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-image-6 {
-  object-fit: contain;
-  width: 400px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-image-7 {
-  object-fit: contain;
-  width: 375px;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-details {
-  display: flex;
-  background-color: var(--cg-white);
-  width: 35%;
-  height: 500px;
-  flex-shrink: 1;
-  padding: 0 20px;
-  margin: 0px;
-  line-height: 1.5;
-  overflow: scroll;
-
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  justify-content: center;
-
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-
-  /* Debug border */
-  /* border: 2px solid green; */
 }
 
-.project-details a {
-  color: var(--cg-black);
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.project-details a:hover {
-  color: var(--cg-poppy);
-  text-decoration: underline;
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 7px 7px 0 0;
 }
 
 .project-details {
+  background-color: var(--cg-white);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  //margin-top: auto;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  border-radius: 0 0 7px 7px;
   font-weight: lighter;
 }
 
@@ -283,8 +141,19 @@ main {
   font-size: 20px;
 }
 
-/* CSS for home page */
+@media (max-width: 768px) {
+  .gallery {
+    justify-content: center; /* Center items on smaller screens */
+  }
+}
 
+@media (min-width: 768px) {
+  .gallery .project:nth-child(2n) {
+    margin-left: 30px; /* Space between items in the same row */
+  }
+}
+
+/* CSS for home page */
 .about {
   display: flex;
   align-items: center;
@@ -292,25 +161,16 @@ main {
   padding: 143px;
   margin-top: 30px;
   background-color: #f8f8f8;
-  // border: 1px solid #ccc;
   border-radius: 7px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
-.about-image img {
-  width: 450px;
-  height: 450px;
-  border-radius: 8px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+.about-image img,
+.blog-image img {
+  border-radius: 7px;
 }
 
 .blog-image img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 7px;
   margin-left: 200px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
 .about-text {
@@ -329,10 +189,9 @@ main {
 }
 
 /* CSS for resume page */
-
 .content-container {
   display: flex;
-  align-items: flex-start; /* Align items at the start */
+  align-items: flex-start;
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -340,7 +199,7 @@ main {
 .image-container img {
   width: 550px;
   border-radius: 7px;
-  margin-right: 20px; /* Space between the image and the text to the right */
+  margin-right: 20px;
 }
 
 .text-container {
@@ -349,10 +208,7 @@ main {
   margin-left: 20px;
 }
 
-.text-above {
-  margin-top: 0;
-}
-
+.text-above,
 .text-below {
   margin-top: 20px;
 }
@@ -365,6 +221,7 @@ main {
   cursor: pointer;
   border-radius: 4px;
   width: 150px;
+  font-family: "Dosis", sans-serif;
 }
 
 .button:hover {
@@ -373,11 +230,10 @@ main {
 }
 
 .resume h2 {
-  font-family: Dosis;
+  font-family: "Dosis", sans-serif;
 }
 
 /* CSS for RSVP form */
-
 .rsvp {
   width: 600px;
   margin: 20px auto;
@@ -419,15 +275,17 @@ main {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-right: 10px;
+  font-family: "Dosis", sans-serif;
 }
 
 .form-group textarea {
-  width: 450px; /* Make the textarea take the full width of its container */
-  min-height: 150px; /* Set a minimum height for the textarea */
-  padding: 10px; /* Add padding for better spacing */
+  width: 450px;
+  min-height: 150px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: "Dosis", sans-serif;
 }
 
 #add-attendee {
@@ -450,26 +308,24 @@ main {
 .form-group input::placeholder,
 .form-group select::placeholder,
 .form-group textarea::placeholder {
-  color: #aaa; /* Set the color of the placeholder text */
+  color: #aaa;
 }
 
 /* CSS for registry */
-
 .container {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Align items vertically */
+  display: flex;
+  align-items: center;
 }
 
 .registry-image-link img {
-  width: 200px; /* Set the width of the image */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px;
+  height: auto;
   margin-top: 100px;
   margin-right: 100px;
   margin-left: 100px;
 }
 
 /* CSS for footer */
-
 .footer {
   display: flex;
   justify-content: center;

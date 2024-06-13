@@ -1,0 +1,487 @@
+.dosis-1 {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  :root {
+    /* variables */
+    --cg-black: rgb(30, 32, 32);
+    --cg-blue: rgb(101, 130, 196);
+    --cg-grey: rgb(232, 232, 232);
+    --cg-darkgrey: rgb(140, 140, 140);
+    --cg-white: rgb(255, 255, 255);
+    --cg-poppy: rgb(254, 155, 13);
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    background: var(--cg-grey);
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Dosis;
+  }
+  
+  /* CSS for navigation */
+  
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 10;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  
+    background-color: var(--cg-white);
+    color: var(--cg-white);
+    padding: 0px 0px;
+  
+    /* Debug border */
+    /* border: solid red; */
+  }
+  
+  .blue-text {
+    color: var(--cg-poppy);
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 30px;
+    list-style: none;
+  
+    /* Debug border */
+    /* border: solid blue; */
+  }
+  
+  .navbar a {
+    color: var(--cg-darkgrey);
+    font-weight: bold;
+    margin: 0 12px;
+    text-decoration: none;
+    letter-spacing: 2px;
+  
+    font-family: Dosis;
+  }
+  
+  .navbar a:hover {
+    color: var(--cg-poppy);
+  }
+  
+  .navbar a:active {
+    color: var(--cg-poppy);
+  }
+  
+  .navbar a.active {
+    color: var(--cg-poppy);
+  }
+  
+  .logo a {
+    color: var(--cg-poppy);
+    font-family: Georgia;
+  }
+  
+  .logo a:hover {
+    color: var(--cg-darkgrey);
+    text-decoration: None;
+  }
+  
+  main {
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-title {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: Dosis;
+  }
+  
+  /* CSS for portfolio grid */
+  
+  .project-1 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 1em 0 2em 0;
+    padding: 0px 250px 0px 0px;
+  
+    /* Debug border */
+    /* border: 2px solid blue; */
+  }
+  
+  .project-2 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 1em 0 2em 0;
+    padding: 0px 0px 0px 250px;
+  
+    /* Debug border */
+    /* border: 2px solid blue; */
+  }
+  
+  .project-3 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 1em 0 2em 0;
+    padding: 0px 0px 0px 250px;
+  
+    /* Debug border */
+    /* border: 2px solid blue; */
+  }
+  
+  .item-link {
+    width: 70%;
+  
+    /* Debug border */
+    /* border: 2px solid red; */
+  }
+  
+  .photos-image-link img {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  
+  .project-image-1 {
+    object-fit: contain;
+    width: 550px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+    border-radius: 15px;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-image-2 {
+    object-fit: contain;
+    width: 550px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+    border-radius: 15px;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-image-3 {
+    object-fit: contain;
+    width: 98px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+    border-radius: 15px;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-image-4 {
+    object-fit: contain;
+    width: 400px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-image-5 {
+    object-fit: contain;
+    width: 210px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-image-6 {
+    object-fit: contain;
+    width: 400px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-image-7 {
+    object-fit: contain;
+    width: 375px;
+    height: 500px;
+    flex-basis: 50px;
+    flex-grow: 2;
+  
+    /* Debug border */
+    /* border: 2px solid black; */
+  }
+  
+  .project-details {
+    display: flex;
+    background-color: var(--cg-white);
+    width: 35%;
+    height: 500px;
+    flex-shrink: 1;
+    padding: 0 20px;
+    margin: 0px;
+    line-height: 1.5;
+    overflow: scroll;
+  
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  
+    /* Debug border */
+    /* border: 2px solid green; */
+  }
+  
+  .project-details a {
+    color: var(--cg-black);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .project-details a:hover {
+    color: var(--cg-poppy);
+    text-decoration: underline;
+  }
+  
+  .project-details {
+    font-weight: lighter;
+  }
+  
+  .project-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  /* CSS for home page */
+  
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 143px;
+    margin-top: 30px;
+    background-color: #f8f8f8;
+    // border: 1px solid #ccc;
+    border-radius: 7px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .about-image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .blog-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    margin-left: 200px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .about-text {
+    flex: 1;
+    margin-left: 100px;
+  }
+  
+  .about-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* CSS for resume page */
+  
+  .content-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .image-container img {
+    width: 550px;
+    border-radius: 7px;
+    margin-right: 20px; /* Space between the image and the text to the right */
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  .text-above {
+    margin-top: 0;
+  }
+  
+  .text-below {
+    margin-top: 20px;
+  }
+  
+  .button {
+    background-color: var(--cg-poppy);
+    color: var(--cg-white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 150px;
+    font-family: Dosis;
+  }
+  
+  .button:hover {
+    background-color: var(--cg-white);
+    color: var(--cg-poppy);
+  }
+  
+  .resume h2 {
+    font-family: Dosis;
+  }
+  
+  /* CSS for RSVP form */
+  
+  .rsvp {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--cg-white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rsvp h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--cg-darkgrey);
+  }
+  
+  .rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-family: Dosis;
+  }
+  
+  .form-group textarea {
+    width: 450px; /* Make the textarea take the full width of its container */
+    min-height: 150px; /* Set a minimum height for the textarea */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Dosis;
+  }
+  
+  #add-attendee {
+    width: 150px;
+    align-self: flex-center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: var(--cg-poppy);
+    color: var(--cg-white);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #add-attendee:hover {
+    color: var(--cg-poppy);
+    background-color: var(--cg-white);
+  }
+  
+  .form-group input::placeholder,
+  .form-group select::placeholder,
+  .form-group textarea::placeholder {
+    color: #aaa; /* Set the color of the placeholder text */
+  }
+  
+  /* CSS for registry */
+  
+  .container {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .registry-image-link img {
+    width: 200px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+  /* CSS for footer */
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cg-black);
+    color: var(--cg-white);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  
