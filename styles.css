@@ -121,14 +121,13 @@ main {
 .project img {
   width: 100%;
   height: auto;
-  border-radius: 7px 7px 0 0;
+  border-radius: 7px;
 }
 
 .project-details {
   background-color: var(--cg-white);
   padding-top: 10px;
   padding-bottom: 10px;
-  //margin-top: auto;
   line-height: 1.5;
   text-align: center;
   width: 100%;
@@ -186,6 +185,33 @@ main {
 .about-text p {
   font-size: 16px;
   line-height: 1.5;
+}
+
+/* Existing styles */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.small-button {
+  background-color: var(--cg-poppy);
+  color: var(--cg-white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Dosis", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.small-button:hover {
+  background-color: var(--cg-white);
+  color: var(--cg-poppy);
 }
 
 /* CSS for resume page */
